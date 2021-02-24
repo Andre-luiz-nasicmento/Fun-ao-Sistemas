@@ -1,0 +1,28 @@
+﻿@using WebAtividadeEntrevista.Models;
+
+@model BeneficiarioModel
+
+<table>
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>CPF</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Itens)
+        {
+            <tr>
+                <td>@item.Nome</td>
+                <td>@item.CPF</td>
+                <td><input type="hidden" id="hdnNome" value="@item.Nome" /></td>
+                <td><input type="hidden" id="hdnCpf" value="@item.CPF" /></td>
+                
+
+                <td><button type="button" id="AlterarBeneficiario" class="btn btn-primary">Alterar</button></td>
+                <td><button type="button" id="ExcluirBeneficiario" class="btn btn-primary">Excluir</button></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
